@@ -1,18 +1,13 @@
 {
   "instructors": [
     {
+      "id": 1,
+      "name": "Aleu",
       "avatar_url": "http://google.com",
-      "name": "sdfasfa",
-      "birth": "2021-04-01",
+      "birth": 1618444800000,
       "gender": "F",
-      "services": "safasdfa"
-    },
-    {
-      "avatar_url": "http://google.com",
-      "name": "afsdfasdfasdfa",
-      "birth": "2021-04-15",
-      "gender": "M",
-      "services": "musculação"
+      "services": "musculação",
+      "created_at": 1619816573230
     }
   ]
 }
