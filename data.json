@@ -1,0 +1,18 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "sdfasfa",
+      "birth": "2021-04-01",
+      "gender": "F",
+      "services": "safasdfa"
+    },
+    {
+      "avatar_url": "http://google.com",
+      "name": "afsdfasdfasdfa",
+      "birth": "2021-04-15",
+      "gender": "M",
+      "services": "musculação"
+    }
+  ]
+}
