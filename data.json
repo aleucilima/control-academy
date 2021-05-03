@@ -2,12 +2,12 @@
   "instructors": [
     {
       "id": 1,
-      "name": "Aleu",
       "avatar_url": "http://google.com",
-      "birth": 1618444800000,
-      "gender": "F",
-      "services": "musculação",
-      "created_at": 1619816573230
+      "name": "Aleuci Lima",
+      "birth": 766454400000,
+      "gender": "M",
+      "services": "JavaScript, React, CSS",
+      "created_at": 1620074402382
     }
   ]
 }
