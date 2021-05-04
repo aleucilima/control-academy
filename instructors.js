@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { age } = require('./utils')
 
 exports.show = (request, response) => {
     const { id } = request.params
@@ -8,26 +9,11 @@ exports.show = (request, response) => {
 
     if(!foundInstructor) return response.send('Instructor not found')
 
-    //Estrutura para trabalhar com datas de aniversário
-    function age(timestamp) {
-        const today = new Date()
-        const birthDate = new Date(timestamp)
-
-        let age = today.getFullYear() - birthDate.getFullYear()
-        const month = today.getMonth() - birthDate.getMonth()
-
-        if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()){
-            age = age - 1
-        }
-
-        return age
-    }
-
     const instructor = {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(','),
-        created_at: '',
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
     }
 
     return response.render('instructors/show', { instructor })
