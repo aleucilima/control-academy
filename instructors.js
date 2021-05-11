@@ -68,12 +68,12 @@ exports.edit = (request, response) => {
     return response.render('instructors/edit', { instructor })
 }
 
-exports.put = (request,response) => {
+exports.put = (request, response) => {
     const { id } = request.body
     let index = 0
 
     const foundInstructor = data.instructors.find((instructor, foundIndex) => {
-        if (instructor.id == id) {
+        if (id == instructor.id) {
             index = foundIndex
             return true
         }
