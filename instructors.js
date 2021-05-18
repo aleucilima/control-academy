@@ -1,3 +1,4 @@
+const { request } = require('express')
 const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utils')
@@ -95,4 +96,19 @@ exports.put = (request, response) => {
         return response.redirect(`/instructors/${id}`)
     })
 
+}
+
+exports.delete = (request, response) => {
+    const { id } = request.body
+
+    const filteredInstructors = data.instructors.filter((instructor) => instructor.id != id)
+
+
+    data.instructors = filteredInstructors
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
+        if (err) return response.send('Write file error')
+
+        return response.redirect('/instructors')
+    })
 }
