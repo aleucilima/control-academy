@@ -90,7 +90,7 @@ exports.put = (request, response) => {
 
     data.instructors[index] = instructor
 
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) =>{
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
         if (err) return response.send('Write error!')
         
         return response.redirect(`/instructors/${id}`)
