@@ -1,3 +1,22 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Aleuci Lima",
+      "birth": 786499200000,
+      "gender": "M",
+      "services": "Programação, React, JavaScript, React Native",
+      "created_at": 1621987103959
+    },
+    {
+      "id": "2",
+      "avatar_url": "http://google.com",
+      "name": "Usuario Teste",
+      "birth": 938908800000,
+      "gender": "F",
+      "services": "React, JavaScript, React Native",
+      "created_at": 1621987147683
+    }
+  ]
 }
