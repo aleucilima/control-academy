@@ -87,7 +87,8 @@ exports.put = (request, response) => {
     const instructor = {
         ...foundInstructor,
         ...request.body,
-        birth: Date.parse(request.body.birth)
+        birth: Date.parse(request.body.birth),
+        id: Number(request.body.id)
     }
 
     data.instructors[index] = instructor
