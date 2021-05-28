@@ -237,6 +237,7 @@ tbody tr td:last-child a {
     color: white;
     font-size: 12px;
     border-radius: 6px;
+    font-weight: bold;
 }
 
 
