@@ -16,7 +16,17 @@
         <input 
             type="text" 
             name="name"
-            placeholder="Nome do instrutor"
+            value="{{ instructor.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input 
+            type="email" 
+            name="email"
             value="{{ instructor.name }}"
         >
     </div>
@@ -54,18 +64,6 @@
                 checked
                 {% endif %} > Feminino
         </span>
-    </div>
-</div>
-
-<div class="item">
-    <div>Área de atuação</div>
-    <div>
-        <input 
-            type="text" 
-            name="services"
-            placeholder="Separe os serviços prestados por vírgula"
-            value="{{ instructor.services }}"
-        >
     </div>
 </div>
 
