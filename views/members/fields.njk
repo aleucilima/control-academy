@@ -11,7 +11,7 @@
 </div>
 
 <div class="item">
-    <div>Instrutor</div>
+    <div>Nome</div>
     <div>
         <input 
             type="text" 
@@ -71,9 +71,37 @@
     <div>Tipo Sanguíneo</div>
     <div>
         <select name="blood">
-            <option value="A1">A+</option>
+            <option value="A1" selected>A+</option>
             <option value="A0">A-</option>
+            <option value="B1">B+</option>
+            <option value="B0">B-</option>
+            <option value="AB1">AB+</option>
+            <option value="AB0">AB-</option>
+            <option value="O1">A+</option>
+            <option value="O0">A-</option>
         </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Peso (kg)</div>
+    <div>
+        <input 
+            type="number" 
+            name="weight"
+            value="{{ instructor.weight }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Altura (cm)</div>
+    <div>
+        <input 
+            type="number" 
+            name="height"
+            value="{{ instructor.height }}"
+        >
     </div>
 </div>
 
