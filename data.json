@@ -1,5 +1,29 @@
 {
-  "members": [],
+  "members": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Aleuci Lima",
+      "email": "aleuci.lima@gmail.com",
+      "birth": 723254400000,
+      "gender": "M",
+      "blood": "O0",
+      "weight": "65",
+      "height": "188",
+      "id": 1
+    },
+    {
+      "avatar_url": "http://google.com",
+      "name": "Aleuci Lima",
+      "email": "aleuci.lima@gmail.com",
+      "birth": 723254400000,
+      "gender": "M",
+      "blood": "O0",
+      "weight": "65",
+      "height": "188",
+      "id": 2
+    }
+  ],
+  
   "instructors": [
     {
       "id": 1,
