@@ -1,8 +1,9 @@
 const { age, date } = require('../../lib/utils')
+const db = require('../../config/db')
 
 module.exports = {
     index(request, response) {
-        return response.render('instructors/index', { instructors })
+        return response.render('instructors/index')
     },
     create(request, response) {
         return response.render('instructors/create')
@@ -15,9 +16,33 @@ module.exports = {
                 return response.send('Please, fill all fields')
         }
         
-        let { avatar_url, birth, name, services, gender } = request.body
+        const query = `
+            INSERT INTO instructors (
+                name,
+                avatar_url,
+                gender,
+                services,
+                birth,
+                created_at
+            ) VALUES ($1, $2, $3, $4, $5, $6)
+            RETURNING id
+        `
 
-        return
+        const values = [
+            request.body.name,
+            request.body.avatar_url,
+            request.body.gender,
+            request.body.services,
+            date(request.body.birth).iso,
+            date(Date.now()).iso
+        ]
+
+        db.query(query, values, (err, results) => {
+            console.log(err)
+            console.log(results)
+            return
+        })
+
 
     },
     show(request, response) {
