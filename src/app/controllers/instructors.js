@@ -38,9 +38,10 @@ module.exports = {
         ]
 
         db.query(query, values, (err, results) => {
-            console.log(err)
-            console.log(results)
-            return
+            if (err) return response.send("Database ERROR!")
+
+            return response.redirect(`/instructors/${results.row[0].id}`)
+  
         })
 
 

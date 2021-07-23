@@ -15,7 +15,6 @@
                 {% include "instructors/fields.njk" %}
     
                 <input type="hidden" name="id" value={{instructor.id}}>
-                
             </form>
 
             <form id="form-delete" action="/instructors?_method=DELETE" method="POST">
