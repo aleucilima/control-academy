@@ -1,9 +1,12 @@
 const { age, date } = require('../../lib/utils')
 const db = require('../../config/db')
+const Instructor = require('../models/Instructor')
 
 module.exports = {
     index(request, response) {
-        return response.render('instructors/index')
+        Instructor.all((instructors) => {
+           return response.render('instructors/index', { instructors })
+        })
     },
     create(request, response) {
         return response.render('instructors/create')
@@ -40,10 +43,8 @@ module.exports = {
         db.query(query, values, (err, results) => {
             if (err) return response.send("Database ERROR!")
 
-            return response.redirect(`/instructors/${results.row[0].id}`)
-  
+            return response.redirect(`/instructors/${results.rows[0].id}`)
         })
-
 
     },
     show(request, response) {
